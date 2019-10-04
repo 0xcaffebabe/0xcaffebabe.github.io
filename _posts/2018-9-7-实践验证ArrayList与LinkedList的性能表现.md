@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "实践验证ArrayList与LinkedList的性能表现"
+date:   2018-09-07T05:42:29
+category: JAVA
+tags: [JAVA]
+---
+
+实践验证ArrayList与LinkedList的性能表现
+
+<p>我们在学习JAVASE的时候就知道，ArrayList底层是以数组实现的，LinkedList则是以链表的形式实现的。</p><p>那么我们今天就能探究一下两者在插入数据和随机访问数据方面的性能表现。</p><p>实验环境:系统:win10 64位</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; JDK:10<br></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CPU:i5-4210u<br></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 内存:8GB<br></p><p>数据量:100万。</p><p>测试代码如下:</p><pre><code>int N=100;<br>        long result=0;<br>        for(int j=0;j&lt;N;j++){<br>            List&lt;Integer&gt; arrayList=new ArrayList&lt;&gt;();<br>            Random random=new Random();<br><br>            <br><br>            long start=System.currentTimeMillis();<br>            for(int i=0;i&lt;1000000;i++){<br>                arrayList.add(random.nextInt());<br>            }<br>            long end=System.currentTimeMillis();<br>            System.err.println("总耗时:"+(end-start)+"ms");<br>            result+=end-start;<br>        }<br><br>        System.err.println("平均耗时:"+result/N+"ms");</code></pre><p>首先我们测试插入数据(100次):</p><p>ArrayList:平均耗时:138ms<br>LinkedList平均耗时:146ms</p><p>两者相差无几。</p><p>接下来测试随机访问，代码如下:</p><pre><code>int N=100;<br>        long result=0;<br>        for(int j=0;j&lt;N;j++){<br>            List&lt;Integer&gt; arrayList=new LinkedList&lt;&gt;();<br>            Random random=new Random();<br><br>            for(int i=0;i&lt;1000000;i++){<br>                arrayList.add(random.nextInt());<br>            }<br><br>            long start=System.currentTimeMillis();<br>            for(int i=0;i&lt;500000;i++){<br>                int a=arrayList.get(random.nextInt(1000000));<br>            }<br>            long end=System.currentTimeMillis();<br>            System.err.println("总耗时:"+(end-start)+"ms");<br>            result+=end-start;<br>        }<br><br>        System.err.println("平均耗时:"+result/N+"ms");</code></pre><p><br></p><p>ArrayList:平均耗时:53ms</p><p>LinkedList 30秒内连第一次循环都没有通过，实验结束。<br></p>
