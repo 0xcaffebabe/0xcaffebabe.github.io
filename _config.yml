@@ -5,13 +5,13 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-title: IS MY BLOG # ex. I m Chuan
-name: 0xcaffebabe # ex. DONGChuan
+# 站点设置
+title: 一切源于兴趣 # ex. I m Chuan
+name: IS MY BLOG # ex. DONGChuan
 email: chenjiping9527@gmail.com
 location: Quanzhou # ex. Nice, France
-company: MyCompany
-company_url: my_company_website
+# company: MyCompany
+# company_url: my_company_website
 github_url: https://github.com/0xcaffebabe # ex. https://github.com/DONGChuan
 github_username: 0xcaffebabe # ex. DONGChuan
 description: 一切源于兴趣
@@ -87,7 +87,7 @@ analytics :
 
 
 # For about.html. Fell free to create your own!
-skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
-skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
+skill_software_keywords: [Java, Python, Linux Sql, Web, Kali, 网络, JavaScript, Html, Css]
+skill_j2ee_keywords: [Spring, Spring MVC, MyBatis, JSP,Spring Boot,Spring Cloud]
 skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
 skill_mobile_app_keywords: [Android, Sketch UI Desgin]
