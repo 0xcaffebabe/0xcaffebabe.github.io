@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "Spring(二):Bean的装配"
+date:   2019-10-21T09:00:00
+category: Spring
+tags: [Spring,Java]
+---
+
+讲解bean的装配
+
 # 自动化装配
 
 ## 注解配置
