@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # 站点设置
-title: 一切源于兴趣 # ex. I m Chuan
+title: ISMY # ex. I m Chuan
 name: IS MY BLOG # ex. DONGChuan
 email: chenjiping9527@gmail.com
 location: 泉州 # ex. Nice, France
@@ -14,7 +14,7 @@ location: 泉州 # ex. Nice, France
 # company_url: my_company_website
 github_url: https://github.com/0xcaffebabe # ex. https://github.com/DONGChuan
 github_username: '0xcaffebabe' # ex. DONGChuan
-description: 一切源于兴趣
+description: '保持饥饿 保持愚蠢'
 favicon: favicon.png # Image must be in assets/images
 repository: 0xcaffebabe/0xcaffebabe.github.io # ex. DONGChuan/DONGChuan.github.io
 
