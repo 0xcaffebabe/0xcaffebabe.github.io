@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'json', github: 'flori/json', branch: 'v1.8'
+gem 'json', github: 'flori/json', branch: 'v1.8.6'
 gem 'rough'
 gem 'jekyll-paginate'
 gem 'jekyll-geo-pattern'
